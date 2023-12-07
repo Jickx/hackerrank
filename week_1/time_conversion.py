@@ -2,11 +2,15 @@ from unittest import TestCase
 
 
 def time_conversion(time):
-    h, m, s = time.split(':')
-    if s[2:] == 'AM':
-        return f'00:{m}:{s[:-2]}' if h == '12' else f'{h}:{m}:{s[:-2]}'
-    else:
-        return f'{int(h)}:{m}:{s[:-2]}' if h == '12' else f'{int(h) + 12}:{m}:{s[:-2]}'
+    h = int(time[:2])
+    if 'AM' in time:
+        if h == 12:
+            h = 00
+    elif 'PM' in time:
+        if h != 12:
+            h += 12
+    hour = str(h).zfill(2)
+    return f'{hour}{time[2:-2]}'
 
 
 class TestTimeConversion(TestCase):
