@@ -35,25 +35,17 @@ def camel_case(data):
 
 data = """
 C;V;can of coke
-
 S;M;sweatTea()
-
 S;V;epsonPrinter
-
 C;M;santa claus
-
 C;C;mirror
 """
 
 expected = """
 canOfCoke
-
 sweat tea
-
 epson printer
-
 santaClaus()
-
 Mirror
 """
 
