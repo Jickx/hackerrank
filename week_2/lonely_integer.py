@@ -1,10 +1,12 @@
 def lonely_integer(seq):
-    while len(seq) > 0:
-        i = seq.pop()
-        if i in seq:
-            seq.remove(i)
-        else:
-            return i
+    result = 0
+    for num in seq:
+        print(bin(result).rjust(10), result)
+        print(bin(num).rjust(10), num)
+        result ^= num
+        print(bin(result).rjust(10), result)
+        print()
+    return result
 
 
 seq = [84, 48, 13, 20, 61, 20, 33, 97, 34, 45, 6, 63, 71, 66, 24, 57, 92, 74, 6, 25, 51, 86, 48, 15, 64, 55, 77, 30, 56,
@@ -12,4 +14,4 @@ seq = [84, 48, 13, 20, 61, 20, 33, 97, 34, 45, 6, 63, 71, 66, 24, 57, 92, 74, 6,
        27, 78, 79, 88, 92, 50, 16, 8, 67, 82, 67, 37, 84, 3, 33, 4, 78, 98, 39, 64, 98, 94, 24, 82, 45, 3, 53, 74, 96,
        9, 10, 94, 13, 79, 15, 27, 56, 66, 32, 81, 77]
 
-assert lonely_integer(seq) == 99
+print(lonely_integer(seq))
