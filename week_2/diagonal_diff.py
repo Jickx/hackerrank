@@ -1,13 +1,6 @@
 def diagonal_diff(matrix):
-    diag = 0
-    i = 0
-    j = len(matrix) - 1
-    while i < len(matrix):
-        diag += matrix[i][i]
-        diag -= matrix[i][j]
-        i += 1
-        j -= 1
-    return abs(diag)
+        diag = [matrix[i][i] - matrix[i][len(matrix) - i - 1] for i in range(len(matrix))]
+        return abs(sum(diag))
 
 
 matrix = [
