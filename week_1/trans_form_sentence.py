@@ -1,5 +1,8 @@
+import string
+
+
 def trans_form_sentence(sentence):
-    alpbt = 'abcdefghijklmnopqrstuvwxyz'
+    alpbt = string.ascii_lowercase
     sen_list = sentence.split()
     result = []
     for word in sen_list:
