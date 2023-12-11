@@ -54,10 +54,14 @@ print(camel_case(data))
 
 class TestCamelCase(TestCase):
     def test_parse(self):
-        self.assertEqual(parse_line('plasticCup()'), ['plastic', 'cup'])
-        self.assertEqual(parse_line('LargeSoftwareBook'), ['large', 'software', 'book'])
-        self.assertEqual(parse_line('mobile phone'), ['mobile', 'phone'])
-        self.assertEqual(parse_line('LargeSoftwareBook'), ['large', 'software', 'book'])
+        self.assertEqual(parse_line('plasticCup()'),
+                         ['plastic', 'cup'])
+        self.assertEqual(parse_line('LargeSoftwareBook'),
+                         ['large', 'software', 'book'])
+        self.assertEqual(parse_line('mobile phone'),
+                         ['mobile', 'phone'])
+        self.assertEqual(parse_line('LargeSoftwareBook'),
+                         ['large', 'software', 'book'])
 
     def test_format(self):
         self.assertEqual(format_line(['plastic', 'cup'],

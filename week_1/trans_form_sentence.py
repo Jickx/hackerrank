@@ -1,5 +1,5 @@
 def trans_form_sentence(sentence):
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    alpbt = 'abcdefghijklmnopqrstuvwxyz'
     sen_list = sentence.split()
     result = []
     for word in sen_list:
@@ -9,9 +9,11 @@ def trans_form_sentence(sentence):
                 new_word += letter
             elif letter.lower() == word[i - 1].lower():
                 new_word += letter
-            elif alphabet.index(letter.lower()) > alphabet.index(word[i - 1].lower()):
+            elif (alpbt.index(letter.lower()) >
+                  alpbt.index(word[i - 1].lower())):
                 new_word += letter.upper()
-            elif alphabet.index(letter.lower()) < alphabet.index(word[i - 1].lower()):
+            elif (alpbt.index(letter.lower()) <
+                  alpbt.index(word[i - 1].lower())):
                 new_word += letter.lower()
         result.append(new_word)
     return ' '.join(result)

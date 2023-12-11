@@ -11,8 +11,8 @@ def matching_strings():
     return result
 
 
-strings = ['abcde', 'sdaklfj', 'asdjf', 'na', 'basdn', 'sdaklfj', 'asdjf', 'na', 'asdjf', 'na', 'basdn', 'sdaklfj',
-           'asdjf']
+strings = ['abcde', 'sdaklfj', 'asdjf', 'na', 'basdn', 'sdaklfj',
+           'asdjf', 'na', 'asdjf', 'na', 'basdn', 'sdaklfj', 'asdjf']
 queries = ['abcde', 'sdaklfj', 'asdjf', 'na', 'basdn']
 expected = [1, 3, 4, 3, 2]
 

@@ -22,4 +22,3 @@ seq = [73, 67, 38, 33]
 expected = [75, 67, 40, 33]
 
 print(grading_students(seq))
-
